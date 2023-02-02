@@ -1,0 +1,369 @@
+[
+  {
+    "line": 20,
+    "elements": [
+      {
+        "line": 21,
+        "name": "Login and go to product page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 394776607,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The user is on login page and then fills login form with folowing information",
+            "match": {
+              "location": "loginStepsDefinations.login(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "password"
+                ]
+              },
+              {
+                "cells": [
+                  "standard_user",
+                  "secret_sauce"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 200964800,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The user clicks on login button",
+            "match": {
+              "location": "loginStepsDefinations.clickLoginBtn()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 298692193,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "Login should be successful and user is on profile page",
+            "match": {
+              "location": "loginStepsDefinations.verifyLogin()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-02-02T13:42:24.641Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3198782418,
+              "status": "passed"
+            },
+            "match": {
+              "location": "loginStepsDefinations.setUpDriverAndPageObjects(Scenario)"
+            }
+          }
+        ],
+        "line": 29,
+        "name": "Verify that Checkout is working with correct credentials",
+        "description": "",
+        "id": "checkout-module;verify-that-checkout-is-working-with-correct-credentials",
+        "after": [
+          {
+            "result": {
+              "duration": 69385440,
+              "status": "passed"
+            },
+            "match": {
+              "location": "loginStepsDefinations.performCleanUp(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 93283147,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The user click on add to cart button of first item",
+            "match": {
+              "location": "loginStepsDefinations.clickAddToCartFirstItem()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 68515459,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Click on view cart items",
+            "match": {
+              "location": "loginStepsDefinations.clickViewCartItem()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 81737137,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Click on checkout button",
+            "match": {
+              "location": "loginStepsDefinations.clickCheckOutBtn()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 257317416,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "The user fills personal information form with following information",
+            "match": {
+              "location": "loginStepsDefinations.fillPersonalInfoForm(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "firstname",
+                  "lastname",
+                  "zipcode"
+                ]
+              },
+              {
+                "cells": [
+                  "Divyansh",
+                  "Bhatnagar",
+                  "438001"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2079968349,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "Clicks continue button",
+            "match": {
+              "location": "loginStepsDefinations.clickContinueBtn()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 102924166,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "The user should direct to the checkout overview page and should see following information",
+            "match": {
+              "location": "loginStepsDefinations.VerifyItemInformation(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "itemname",
+                  "itemprice",
+                  "tax",
+                  "totalAmount"
+                ]
+              },
+              {
+                "cells": [
+                  "Sauce Labs Backpack",
+                  "$29.99",
+                  "$2.40",
+                  "$32.39"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 80354222,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "The user click on  finish button",
+            "match": {
+              "location": "loginStepsDefinations.clickFinishBtn()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 26131041,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "The user should direct to confirmation page and should see the message following",
+            "match": {
+              "location": "loginStepsDefinations.verifySuccessMessage(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Message"
+                ]
+              },
+              {
+                "cells": [
+                  "THANK YOU FOR YOUR ORDER"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          },
+          {
+            "name": "@checkout"
+          },
+          {
+            "name": "@positive"
+          },
+          {
+            "name": "@critical"
+          }
+        ]
+      }
+    ],
+    "name": "Checkout Module",
+    "description": "",
+    "id": "checkout-module",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/FeatureFiles/checkout.feature",
+    "tags": []
+  },
+  {
+    "line": 21,
+    "elements": [
+      {
+        "start_timestamp": "2023-02-02T13:42:24.641Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3196612641,
+              "status": "passed"
+            },
+            "match": {
+              "location": "loginStepsDefinations.setUpDriverAndPageObjects(Scenario)"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Verify login functionality",
+        "description": "",
+        "id": "login-module;verify-login-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 79424344,
+              "status": "passed"
+            },
+            "match": {
+              "location": "loginStepsDefinations.performCleanUp(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 371677968,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The user is on login page and then fills login form with folowing information",
+            "match": {
+              "location": "loginStepsDefinations.login(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "password"
+                ]
+              },
+              {
+                "cells": [
+                  "standard_user",
+                  "secret_sauce"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 157596902,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The user clicks on login button",
+            "match": {
+              "location": "loginStepsDefinations.clickLoginBtn()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 238621703,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "Login should be successful and user is on profile page",
+            "match": {
+              "location": "loginStepsDefinations.verifyLogin()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          },
+          {
+            "name": "@login"
+          },
+          {
+            "name": "@positive"
+          },
+          {
+            "name": "@critical"
+          }
+        ]
+      }
+    ],
+    "name": "Login Module",
+    "description": "",
+    "id": "login-module",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/FeatureFiles/loginModule.feature",
+    "tags": []
+  }
+]
