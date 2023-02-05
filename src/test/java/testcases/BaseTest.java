@@ -32,11 +32,10 @@ public abstract class BaseTest {
 		// setting up chromedriver
 
 		ChromeOptions options = new ChromeOptions();
-		// options.addArguments("--headless");// Bypass OS security model
-		// options.addArguments("--disable-dev-shm-usage"); // overcome limited resource
-		// problems
-		// options.addArguments("-–no-sandbox");
-		// options.addArguments("window-size=1200,1100");
+		options.addArguments("--headless");// Bypass OS security model
+		options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+		options.addArguments("-–no-sandbox");
+		options.addArguments("window-size=1200,1100");
 
 		driver.set(new ChromeDriver(options));
 		driver.get().manage().window().maximize();
