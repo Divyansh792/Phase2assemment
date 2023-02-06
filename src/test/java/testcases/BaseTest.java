@@ -36,7 +36,7 @@ public abstract class BaseTest {
 		// setting up chromedriver
 
 		ChromeOptions options = new ChromeOptions();
-		// options.addArguments("--headless");// Bypass OS security model
+		 options.addArguments("--headless");// Bypass OS security model
 		// options.addArguments("--disable-dev-shm-usage"); // overcome limited resource
 		// problems
 		// options.addArguments("-–no-sandbox");
