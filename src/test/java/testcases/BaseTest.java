@@ -43,6 +43,7 @@ public abstract class BaseTest {
 		// options.addArguments("window-size=1200,1100");
 
 		//driver.set(new ChromeDriver(options));
+		WebDriverManager.chromedriver().setup();
 		try{
 		    driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options));
 		} catch (MalformedURLException e) {
