@@ -45,7 +45,7 @@ public abstract class BaseTest {
 		//driver.set(new ChromeDriver(options));
 		WebDriverManager.chromedriver().setup();
 		try{
-		    driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options));
+		    driver.set(new RemoteWebDriver(new URL("http://172.17.0.1:4444/wd/hub"), options));
 		} catch (MalformedURLException e) {
 		      // Todo Auto-generated catch block
 		       e.printStackTrace();
