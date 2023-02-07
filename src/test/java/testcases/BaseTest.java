@@ -1,8 +1,9 @@
 package testcases;
 
 import java.net.MalformedURLException;
-
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 //import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -36,19 +37,18 @@ public abstract class BaseTest {
 		// setting up chromedriver
 
 		ChromeOptions options = new ChromeOptions();
-		 options.addArguments("--headless");// Bypass OS security model
+		// options.addArguments("--headless");// Bypass OS security model
 		// options.addArguments("--disable-dev-shm-usage"); // overcome limited resource
 		// problems
 		// options.addArguments("-–no-sandbox");
 		// options.addArguments("window-size=1200,1100");
 
-		//driver.set(new ChromeDriver(options));
-		WebDriverManager.chromedriver().setup();
-		try{
-		    driver.set(new RemoteWebDriver(new URL("http://172.17.0.1:4444/wd/hub"), options));
+		// driver.set(new ChromeDriver(options));
+		try {
+			driver.set(new RemoteWebDriver(new URL("http://172.17.0.1:4444/wd/hub"), options));
 		} catch (MalformedURLException e) {
-		      // Todo Auto-generated catch block
-		       e.printStackTrace();
+			// Todo Auto-generated catch block
+			e.printStackTrace();
 		}
 		driver.get().manage().window().maximize();
 		driver.get().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
